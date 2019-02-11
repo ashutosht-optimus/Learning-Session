@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="google.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<link href="https://unpkg.com/bootstrap-table@1.13.4/dist/bootstrap-table.min.css" rel="stylesheet">
+ <script src="https://unpkg.com/bootstrap-table@1.13.4/dist/bootstrap-table.min.js"></script>
+
+
+<body>
+
+
+<!-- This is navbar -->
+<nav class="navbar navbar-inverse" id="nav">
+  <div class="container-fluid">
+    <!-- Row 1 -->
+
+  <div class="row">
+
+   
+
+        <div class="col-md-2">      
+          <img align="left" src="optimusinfologo.png" >
+        </div>
+
+        <div class="col-md-8 text-center" >
+          
+
+          <a href="www.google.com"><label id="LinkDashboard"><font size="4.5">Dashboard&nbsp;&nbsp;|&nbsp;&nbsp;</font></label></a>
+          <a href="www.google.com"><label id="LinkManageSession"><font size="4.5"> Manage Session</font></label></a>
+
+        </div>
+
+        <div class="col-md-2 ">
+          
+          <button id="LogoutButton" type="submit" class="btn btn-danger">Logout</button>
+                    
+        </div>
+
+ </div>
+
+  </div>
+</nav>
+
+
+
+<!-- Container class contain all row elements-->
+
+<div class="container-fluid">
+
+<!-- Row 2-->
+<!-- This row 2 contain search button,toggle and filter option -->
+
+  <div class="row">
+
+    <div class="container-fluid">
+
+        <div class="col-md-4">      
+            <div class="form-group has-feedback">
+              <div class="input-group">
+                <span class="input-group-addon" style="background-color:#FFFFFF;"><span class="glyphicon glyphicon-search"></span></span>
+               <input type="text" onkeyup="myFunction()" class="form-control" id="inputGroupSuccess1" placeholder="Search..." style="border-left: 0px;">
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <label class="switch">
+                <input type="checkbox">
+                 <span class="slider round"></span>
+              </label>
+
+              &nbsp;&nbsp;
+              <font size="4.5">Past Session</font>
+        </div>
+
+        <div class="col-md-5">
+                      
+                      <button class="glyphicon glyphicon-filter" type="button" class="open-button" onclick="openForm();">
+                      </button>
+
+                      <div class="form-popup" id="myForm">
+                        <form action="/action_page.php" class="form-container">
+                        <h1>Filter Session</h1>
+
+
+
+                       <!--  Creator Dropdown  -->
+                        
+                        
+                          <div class="form-group">
+                            <label class="control-label" for="company">Creator</label>
+                            <div>
+                              <select id="company" class="form-control">
+                                <option>small</option>
+                                <option>medium</option>
+                                <option>large</option>
+                              </select> 
+                            </div>
+                          </div>
+                     <!--  Presentor Dropdown  -->
+                        
+                        
+                          <div class="form-group">
+                            <label class="control-label" for="company">Presentor</label>
+                            <div>
+                              <select id="company" class="form-control">
+                                <option>small</option>
+                                <option>medium</option>
+                                <option>large</option>
+                              </select> 
+                            </div>
+                          </div>
+                     <!--  Session type Dropdown  -->
+                        
+                          <div class="form-group">
+                            <label class="control-label" for="company">Session Type</label>
+                            <div>
+                              <select id="company" class="form-control">
+                                <option>small</option>
+                                <option>medium</option>
+                                <option>large</option>
+                              </select> 
+                            </div>
+                          </div>
+                     <!--  Date Dropdown  -->
+                        
+                          <div class="form-group">
+                            <label class="control-label" for="company">Date</label>
+                            <div>
+                              <select id="company" class="form-control">
+                                <option>small</option>
+                                <option>medium</option>
+                                <option>large</option>
+                              </select> 
+                            </div>
+                          </div>                 
+        </div>
+
+    </div>
+
+ </div>
+
+
+
+<!-- Row 3 -->
+  <div class="row">
+
+    <div class="container-fluid">
+
+
+<table data-toggle="table" id="myTable" 
+   data-sort-name="stargazers_count"
+   data-sort-order="desc">
+    <thead>
+    <tr>
+        <th data-field="name" 
+            data-sortable="true">
+                Session Name
+        </th>
+        <th data-field="stargazers_count" 
+            data-sortable="true">
+                Session Type
+        </th>
+        <th data-field="forks_count" >
+                Date
+        </th>
+        <th data-field="description">
+                Presenter
+        </th>
+
+                <th data-field="description">
+                Creator
+        </th>
+
+
+
+                <th data-field="description">
+                Delete
+        </th>
+
+                </th>
+
+                <th data-field="description">
+                Edit
+        </th>
+    </tr>
+    </thead>
+
+     <tr>
+       <td>Ashutosh</td>
+       <td>5</td>
+       <td>1</td>
+       <td>xvgdfg</td>
+
+     </tr>
+
+      <tr>
+       <td>Vshutosh</td>
+       <td>3</td>
+       <td>2</td>
+       <td>sdfsdf </td>
+
+     </tr>
+
+     </tr>
+
+      <tr>
+       <td>Cshutosh</td>
+       <td>3</td>
+       <td>2</td>
+       <td>sdfsdf </td>
+
+     </tr>
+          </tr>
+
+      <tr>
+       <td>lshutosh</td>
+       <td>3</td>
+       <td>2</td>
+       <td>sdfsdf </td>
+
+     </tr>
+
+          </tr>
+
+      <tr>
+       <td>ushutosh</td>
+       <td>3</td>
+       <td>2</td>
+       <td>sdfsdf </td>
+
+     </tr>
+
+</table>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+</body>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+//Filter button
+function myFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("inputGroupSuccess1");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+</script>
+
+
+</html>
+
+
+
